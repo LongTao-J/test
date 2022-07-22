@@ -1,0 +1,1289 @@
+2022-07-21 15:34:00 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 5188 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 15:34:00 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 15:34:01 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 15:34:01 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 15:34:01 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 15:34:01 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 15:34:01 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 15:34:01 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 15:34:01 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 15:34:01 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 15:34:02 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 15:34:02 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 15:34:02 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 15:34:04 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 15:34:04 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 6.184 seconds (JVM running for 7.666)
+2022-07-21 15:36:37 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 15:36:37 [http-nio-8081-exec-2]**************** ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy88.getOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:320)
+	at java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:627)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy88.getOne(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy90.getOne(Unknown Source)
+	at com.example.histudent.controller.UserController.login(UserController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-21 15:43:43 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 13604 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 15:43:43 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 15:43:44 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 15:43:44 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 15:43:44 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 15:43:45 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 15:43:45 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 15:43:45 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 15:43:45 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 15:43:47 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.992 seconds (JVM running for 6.262)
+2022-07-21 15:43:48 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 15:43:48 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 15:44:21 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 1972 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 15:44:21 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 15:44:23 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 15:44:23 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 15:44:23 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 15:44:23 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 15:44:23 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 15:44:23 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 15:44:24 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 15:44:26 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.079 seconds (JVM running for 6.294)
+2022-07-21 15:44:26 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 15:44:26 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 15:49:49 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 15:49:49 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 15:50:53 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 13668 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 15:50:53 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 15:50:54 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 15:50:54 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 15:50:54 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 15:50:54 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 15:50:55 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 15:50:55 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 15:50:55 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 15:50:57 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.028 seconds (JVM running for 6.269)
+2022-07-21 15:50:57 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 15:50:57 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 15:55:00 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 16292 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 15:55:00 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 15:55:01 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 15:55:01 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 15:55:01 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 15:55:02 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 15:55:02 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 15:55:02 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 15:55:02 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 15:55:04 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.863 seconds (JVM running for 6.04)
+2022-07-21 15:55:05 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 15:55:05 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 15:56:12 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 2844 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 15:56:12 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 15:56:13 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 15:56:13 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 15:56:13 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 15:56:13 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 15:56:14 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 15:56:14 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 15:56:14 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 15:56:16 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.843 seconds (JVM running for 6.4)
+2022-07-21 15:56:16 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 15:56:16 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:08:45 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 16548 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:08:45 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 16:08:47 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:08:47 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 16:08:47 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:08:47 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 16:08:47 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:08:47 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:08:47 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:08:47 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:08:47 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:08:47 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:08:47 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:08:48 [main]**************** WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.example.histudent.pojo.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-21 16:08:48 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:08:48 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.474 seconds (JVM running for 4.604)
+2022-07-21 16:09:19 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:09:34 [http-nio-8081-exec-4]**************** ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy86.getOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:320)
+	at java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:627)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy86.getOne(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy88.getOne(Unknown Source)
+	at com.example.histudent.controller.UserController.login(UserController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-21 16:10:33 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:10:33 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:10:58 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 6156 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:10:58 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 16:10:59 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:10:59 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 16:10:59 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:10:59 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 16:10:59 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:10:59 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:10:59 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:10:59 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:10:59 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:10:59 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:10:59 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:11:00 [main]**************** WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.example.histudent.pojo.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-21 16:11:00 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:11:00 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.729 seconds (JVM running for 4.532)
+2022-07-21 16:11:06 [http-nio-8081-exec-5]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:13:20 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:13:20 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:13:24 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 1456 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:13:24 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 16:13:25 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:13:25 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 16:13:25 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:13:25 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 16:13:26 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:13:26 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:13:26 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:13:26 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:13:26 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:13:26 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:13:26 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:13:27 [main]**************** WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.example.histudent.pojo.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-21 16:13:27 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:13:27 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.149 seconds (JVM running for 3.931)
+2022-07-21 16:13:32 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:13:32 [http-nio-8081-exec-1]**************** ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy88.getOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:320)
+	at java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:627)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy88.getOne(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy90.getOne(Unknown Source)
+	at com.example.histudent.controller.UserController.login(UserController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-21 16:13:46 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:13:46 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:13:51 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 6668 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:13:51 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 16:13:52 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:13:52 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 16:13:52 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:13:52 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 16:13:52 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:13:52 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:13:52 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:13:52 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:13:52 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:13:52 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:13:52 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:13:53 [main]**************** WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.example.histudent.pojo.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-21 16:13:53 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:13:53 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.016 seconds (JVM running for 3.98)
+2022-07-21 16:14:00 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:14:00 [http-nio-8081-exec-2]**************** ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.histudent.service.UserService.getOne
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy86.getOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:320)
+	at java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:627)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy86.getOne(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy88.getOne(Unknown Source)
+	at com.example.histudent.controller.UserController.login(UserController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-21 16:14:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:14:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:14:13 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 9604 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:14:13 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 16:14:14 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:14:14 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 16:14:14 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:14:14 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 16:14:15 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:14:15 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:14:15 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:14:15 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:14:15 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:14:15 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:14:15 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:14:15 [main]**************** WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.example.histudent.pojo.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-21 16:14:16 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:14:16 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.08 seconds (JVM running for 4.059)
+2022-07-21 16:14:21 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:28:00 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 16420 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:28:00 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:28:01 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:28:01 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:28:01 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:28:02 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:28:02 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:28:02 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:28:02 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:28:04 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.059 seconds (JVM running for 6.277)
+2022-07-21 16:28:05 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:28:05 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:41:28 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 8284 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:41:28 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:41:30 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:41:30 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:41:30 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:41:30 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:41:30 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:41:31 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:41:31 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:41:33 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.32 seconds (JVM running for 6.555)
+2022-07-21 16:41:33 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:41:33 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:42:03 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 1224 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:42:03 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:42:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:42:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:42:05 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:42:05 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:42:05 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:42:05 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:42:05 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:42:08 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.004 seconds (JVM running for 6.331)
+2022-07-21 16:42:08 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:42:08 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:42:23 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 11208 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:42:23 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:42:24 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:42:24 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:42:24 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:42:24 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:42:25 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:42:25 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:42:25 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:42:27 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.976 seconds (JVM running for 6.204)
+2022-07-21 16:42:28 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:42:28 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:43:25 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 16376 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:43:25 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:43:26 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:43:27 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:43:27 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:43:27 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:43:27 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:43:27 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:43:27 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:43:29 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.96 seconds (JVM running for 6.18)
+2022-07-21 16:43:30 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:43:30 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:48:38 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 908 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:48:38 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:48:40 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:48:40 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:48:40 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:48:40 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:48:40 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:48:40 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:48:41 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:48:43 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.896 seconds (JVM running for 6.09)
+2022-07-21 16:48:43 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:48:43 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:50:04 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 15548 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:50:04 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:50:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:50:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:50:05 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:50:05 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:50:05 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:50:06 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:50:06 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:50:08 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.868 seconds (JVM running for 6.111)
+2022-07-21 16:50:08 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:50:08 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:51:08 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 3472 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:51:08 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:51:10 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:51:10 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:51:10 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:51:10 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:51:10 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:51:10 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:51:10 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:51:13 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.816 seconds (JVM running for 6.336)
+2022-07-21 16:51:13 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:51:13 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:51:38 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 13456 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:51:38 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:51:40 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:51:40 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:51:40 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:51:40 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:51:40 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:51:41 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:51:41 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:51:43 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.986 seconds (JVM running for 6.211)
+2022-07-21 16:51:43 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:51:43 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:52:03 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 13196 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:52:03 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:52:04 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:52:04 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:52:04 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:52:04 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:52:05 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:52:05 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:52:05 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:52:07 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.183 seconds (JVM running for 6.369)
+2022-07-21 16:52:08 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:52:08 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:54:27 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 18312 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:54:27 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 16:54:28 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:54:28 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:54:28 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:54:28 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:54:29 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:54:29 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:54:29 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:54:31 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.931 seconds (JVM running for 6.161)
+2022-07-21 16:54:32 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:54:32 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:55:50 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:55:50 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:56:07 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 17564 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:56:07 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 16:56:08 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:56:08 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 16:56:08 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:56:08 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 16:56:08 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:56:08 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:56:08 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:56:08 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:56:09 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:56:09 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:56:09 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:56:10 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:56:10 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 2.979 seconds (JVM running for 4.131)
+2022-07-21 16:56:16 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:57:01 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 16:57:01 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 16:57:07 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 16248 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 16:57:07 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 16:57:08 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:57:08 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 16:57:08 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:57:08 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 16:57:08 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 16:57:08 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 16:57:08 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:57:08 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:57:08 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:57:08 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 16:57:08 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:57:10 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 16:57:10 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.327 seconds (JVM running for 4.169)
+2022-07-21 16:57:12 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 17:00:29 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:00:29 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 17:00:34 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 4092 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 17:00:34 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 17:00:35 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:00:35 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 17:00:35 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 17:00:35 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 17:00:35 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 17:00:35 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 17:00:35 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 17:00:35 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 17:00:35 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 17:00:35 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 17:00:35 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 17:00:36 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:00:36 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.125 seconds (JVM running for 3.954)
+2022-07-21 17:01:22 [http-nio-8081-exec-6]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 17:08:55 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:08:55 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 17:09:01 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 13232 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 17:09:01 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 17:09:02 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:09:02 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 17:09:02 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 17:09:02 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 17:09:02 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 17:09:02 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 17:09:02 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 17:09:02 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 17:09:02 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 17:09:03 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 17:09:03 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 17:09:04 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:09:04 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.616 seconds (JVM running for 4.464)
+2022-07-21 17:09:05 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 17:35:27 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:35:27 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 17:35:37 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 6364 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 17:35:37 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 17:35:38 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:35:38 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 17:35:38 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 17:35:38 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 17:35:38 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 17:35:38 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 17:35:38 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 17:35:38 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 17:35:38 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 17:35:39 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 17:35:39 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 17:35:40 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:35:40 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.623 seconds (JVM running for 4.528)
+2022-07-21 17:36:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:36:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 17:36:15 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 13724 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 17:36:15 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 17:36:16 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:36:16 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 17:36:16 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 17:36:16 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 17:36:16 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 17:36:16 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 17:36:16 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 17:36:16 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 17:36:16 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 17:36:16 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 17:36:16 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 17:36:17 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:36:17 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.205 seconds (JVM running for 4.016)
+2022-07-21 17:36:22 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 17:57:18 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:57:18 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 17:57:27 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 14424 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 17:57:27 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 17:57:28 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:57:28 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 17:57:28 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 17:57:28 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 17:57:28 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 17:57:28 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 17:57:28 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 17:57:28 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 17:57:28 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 17:57:28 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 17:57:28 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 17:57:29 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 17:57:29 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.365 seconds (JVM running for 4.231)
+2022-07-21 17:57:44 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 17:58:22 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:58:22 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 17:58:57 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 18560 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 17:58:57 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 17:58:59 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 17:58:59 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 17:58:59 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 17:58:59 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 17:58:59 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 17:59:00 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 17:59:00 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 17:59:02 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.359 seconds (JVM running for 6.344)
+2022-07-21 17:59:03 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:59:03 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 17:59:35 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 11040 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 17:59:35 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 17:59:36 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 17:59:36 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 17:59:36 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 17:59:36 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 17:59:36 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 17:59:37 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 17:59:37 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 17:59:39 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.387 seconds (JVM running for 6.43)
+2022-07-21 17:59:40 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 17:59:40 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:23:45 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 15896 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:23:45 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:23:47 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:23:47 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:23:47 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:23:47 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:23:47 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:23:48 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:23:48 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:23:50 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.851 seconds (JVM running for 6.48)
+2022-07-21 18:23:50 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:23:50 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:24:50 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 18352 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:24:50 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:24:51 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:24:51 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:24:51 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:24:51 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:24:52 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:24:52 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:24:52 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:24:54 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.988 seconds (JVM running for 6.321)
+2022-07-21 18:24:55 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:24:55 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:32:11 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 16356 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:32:11 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:32:13 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:32:13 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:32:13 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:32:13 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:32:13 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:32:14 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:32:14 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:32:16 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 4.862 seconds (JVM running for 6.103)
+2022-07-21 18:32:16 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:32:16 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:32:34 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 14284 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:32:34 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:32:35 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:32:35 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:32:35 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:32:36 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:32:36 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:32:36 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:32:36 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:32:39 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.355 seconds (JVM running for 6.568)
+2022-07-21 18:32:39 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:32:39 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:32:44 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 13728 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:32:44 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 18:32:45 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:32:45 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 18:32:45 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 18:32:46 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 18:32:46 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:32:46 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:32:46 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:32:46 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:32:46 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:32:46 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:32:46 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:32:48 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:32:48 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 4.015 seconds (JVM running for 4.998)
+2022-07-21 18:34:34 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 18:37:25 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:37:25 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:37:30 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 20096 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:37:30 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 18:37:31 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:37:31 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 18:37:31 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 18:37:31 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 18:37:32 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:37:32 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:37:32 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:37:32 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:37:32 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:37:32 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:37:32 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:37:33 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:37:33 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.515 seconds (JVM running for 4.465)
+2022-07-21 18:37:37 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 18:38:27 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:38:27 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:38:32 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 8236 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:38:32 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 18:38:33 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:38:33 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 18:38:33 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 18:38:33 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 18:38:33 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:38:33 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:38:34 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:38:34 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:38:34 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:38:34 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:38:34 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:38:35 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:38:35 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.121 seconds (JVM running for 4.002)
+2022-07-21 18:38:44 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 18:39:32 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 10324 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 18:39:32 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:39:33 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:39:34 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:39:34 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:39:34 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:39:34 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:39:34 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:39:34 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:39:37 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.079 seconds (JVM running for 6.027)
+2022-07-21 18:39:37 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:39:37 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:39:53 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:39:53 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:40:22 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 20252 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 18:40:22 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:40:23 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:40:24 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:40:24 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:40:24 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:40:24 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:40:24 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:40:24 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:40:27 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.094 seconds (JVM running for 6.032)
+2022-07-21 18:40:27 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:40:27 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:41:46 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 1224 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 18:41:46 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:41:48 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:41:48 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:41:48 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:41:48 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:41:48 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:41:49 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:41:49 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:41:51 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.204 seconds (JVM running for 6.18)
+2022-07-21 18:41:51 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:41:51 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:42:04 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 20204 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 18:42:04 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:42:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:42:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:42:05 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:42:05 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:42:06 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:42:06 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:42:06 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:42:08 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.1 seconds (JVM running for 6.135)
+2022-07-21 18:42:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:42:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:42:28 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 19352 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:42:28 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 18:42:29 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:42:29 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 18:42:29 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 18:42:29 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 18:42:29 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:42:29 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:42:29 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:42:29 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:42:29 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:42:29 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:42:30 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:42:31 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:42:31 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.738 seconds (JVM running for 4.579)
+2022-07-21 18:42:56 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 18:42:56 [http-nio-8081-exec-1]**************** ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: One record is expected, but the query result is multiple records] with root cause
+com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: One record is expected, but the query result is multiple records
+	at com.baomidou.mybatisplus.core.toolkit.ExceptionUtils.mpe(ExceptionUtils.java:49)
+	at com.baomidou.mybatisplus.core.mapper.BaseMapper.selectOne(BaseMapper.java:176)
+	at java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:627)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy91.selectOne(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.getOne(ServiceImpl.java:202)
+	at com.baomidou.mybatisplus.extension.service.IService.getOne(IService.java:320)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.example.histudent.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$d5c5b1b9.getOne(<generated>)
+	at com.example.histudent.controller.UserController.login(UserController.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-21 18:44:06 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 19188 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:44:06 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:44:07 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:44:07 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:44:07 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:44:07 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:44:08 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:44:08 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:44:08 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:44:10 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.117 seconds (JVM running for 6.288)
+2022-07-21 18:44:11 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:44:11 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:44:58 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 7720 (started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:44:58 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:44:59 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:44:59 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:45:00 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:45:00 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:45:00 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:45:00 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:45:00 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:45:02 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.123 seconds (JVM running for 6.311)
+2022-07-21 18:45:03 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:45:03 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:46:11 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:46:11 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:46:28 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 3076 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 18:46:28 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:46:30 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:46:30 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:46:30 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:46:30 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:46:30 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:46:30 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:46:30 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:46:33 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.074 seconds (JVM running for 5.977)
+2022-07-21 18:46:33 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:46:33 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:46:43 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 14360 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 18:46:43 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 18:46:44 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:46:45 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:46:45 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:46:45 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:46:45 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:46:46 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:46:46 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:46:49 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 6.113 seconds (JVM running for 7.071)
+2022-07-21 18:46:49 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 18:46:49 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 18:55:40 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 17832 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 18:55:40 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 18:55:41 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:55:41 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 18:55:41 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 18:55:41 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 18:55:41 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 18:55:41 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 18:55:41 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 18:55:41 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 18:55:42 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 18:55:42 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 18:55:42 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 18:55:43 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 18:55:43 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.626 seconds (JVM running for 4.503)
+2022-07-21 18:56:31 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 20:00:02 [HikariPool-1 housekeeper]**************** WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m20s190ms628µs800ns).
+2022-07-21 21:18:49 [HikariPool-1 housekeeper]**************** WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m46s274ms768µs900ns).
+2022-07-21 22:47:18 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:47:18 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:47:24 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 4968 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 22:47:24 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 22:47:25 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:47:25 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 22:47:25 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 22:47:25 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 22:47:26 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:47:26 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:47:26 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:47:26 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:47:26 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:47:26 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:47:26 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:47:27 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:47:27 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.579 seconds (JVM running for 4.515)
+2022-07-21 22:48:52 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 22:49:18 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:49:18 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:50:28 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 5048 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 22:50:28 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 22:50:29 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:50:29 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 22:50:29 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 22:50:29 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 22:50:29 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:50:29 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:50:29 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:50:29 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:50:30 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:50:30 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:50:30 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:50:31 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:50:31 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.713 seconds (JVM running for 4.845)
+2022-07-21 22:51:04 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 22:52:12 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:52:12 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:52:21 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 12960 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 22:52:21 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 22:52:23 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:52:23 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 22:52:23 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 22:52:23 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 22:52:23 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:52:23 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:52:23 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:52:23 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:52:23 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:52:23 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:52:23 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:52:24 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:52:24 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.554 seconds (JVM running for 4.591)
+2022-07-21 22:52:44 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 22:53:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:53:09 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:53:15 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 20684 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 22:53:15 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 22:53:16 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:53:16 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 22:53:16 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 22:53:16 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 22:53:16 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:53:16 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:53:16 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:53:16 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:53:16 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:53:16 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:53:17 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:53:18 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:53:18 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.601 seconds (JVM running for 4.588)
+2022-07-21 22:53:23 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 22:54:42 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:54:42 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:54:59 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 22712 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 22:54:59 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 22:55:00 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:55:00 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:55:01 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:55:01 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:55:01 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:55:01 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:55:01 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:55:04 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.264 seconds (JVM running for 6.225)
+2022-07-21 22:55:04 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:55:04 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:55:13 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 3696 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 22:55:13 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 22:55:15 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:55:15 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:55:15 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:55:15 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:55:16 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:55:16 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:55:16 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:55:19 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.671 seconds (JVM running for 6.659)
+2022-07-21 22:55:19 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:55:19 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:57:04 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 20684 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 22:57:04 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 22:57:05 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:57:05 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 22:57:05 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 22:57:05 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 22:57:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:57:05 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:57:05 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:57:05 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:57:05 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:57:06 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:57:06 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:57:07 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:57:07 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.355 seconds (JVM running for 4.451)
+2022-07-21 22:57:30 [http-nio-8081-exec-4]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 22:59:46 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 22:59:46 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 22:59:52 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 17632 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 22:59:52 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 22:59:53 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:59:53 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 22:59:53 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 22:59:53 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 22:59:53 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 22:59:53 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 22:59:53 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 22:59:53 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 22:59:53 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 22:59:53 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 22:59:53 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 22:59:54 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 22:59:55 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.347 seconds (JVM running for 4.251)
+2022-07-21 23:00:15 [http-nio-8081-exec-2]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 23:03:59 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:03:59 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:04:05 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 18512 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 23:04:05 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 23:04:06 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 23:04:06 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 23:04:06 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 23:04:06 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 23:04:06 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:04:07 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:04:07 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:04:07 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:04:07 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:04:07 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:04:07 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:04:08 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 23:04:08 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.429 seconds (JVM running for 4.497)
+2022-07-21 23:04:30 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 23:05:15 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:05:15 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:05:36 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 596 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 23:05:36 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 23:05:37 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:05:37 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:05:37 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:05:37 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:05:37 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:05:38 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:05:38 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:05:40 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.616 seconds (JVM running for 7.219)
+2022-07-21 23:05:41 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:05:41 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:05:50 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 3996 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 23:05:50 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 23:05:52 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:05:52 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:05:52 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:05:52 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:05:52 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:05:53 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:05:53 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:05:55 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.425 seconds (JVM running for 6.602)
+2022-07-21 23:05:56 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:05:56 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:21:21 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 23104 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 23:21:21 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 23:21:23 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:21:23 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:21:23 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:21:23 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:21:24 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:21:25 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:21:25 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:21:28 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 7.88 seconds (JVM running for 9.405)
+2022-07-21 23:21:28 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:21:28 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:21:39 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 11140 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 23:21:39 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 23:21:41 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:21:42 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:21:42 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:21:42 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:21:42 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:21:42 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:21:43 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:21:46 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 7.272 seconds (JVM running for 8.802)
+2022-07-21 23:21:46 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:21:46 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:40:06 [main]**************** INFO  com.example.histudent.HistudentApplication - Starting HistudentApplication using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 6276 (E:\软件设计大赛\后端\histudent-master\target\classes started by 龙涛05664416459 in E:\软件设计大赛\后端\histudent-master)
+2022-07-21 23:40:06 [main]**************** INFO  com.example.histudent.HistudentApplication - The following 1 profile is active: "dev"
+2022-07-21 23:40:08 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-21 23:40:08 [main]**************** INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-21 23:40:08 [main]**************** INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 23:40:08 [main]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-21 23:40:08 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:40:08 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:40:08 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:40:08 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:40:08 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:40:08 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:40:08 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:40:10 [main]**************** INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-07-21 23:40:10 [main]**************** INFO  com.example.histudent.HistudentApplication - Started HistudentApplication in 3.665 seconds (JVM running for 4.786)
+2022-07-21 23:40:22 [http-nio-8081-exec-1]**************** INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 23:40:54 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:40:54 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:41:18 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 17320 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 23:41:18 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 23:41:19 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:41:19 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:41:19 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:41:19 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:41:20 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:41:20 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:41:20 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:41:22 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.114 seconds (JVM running for 6.085)
+2022-07-21 23:41:22 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:41:22 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-07-21 23:41:32 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Starting HistudentApplicationTests using Java 1.8.0_301 on LAPTOP-NM7AET7F with PID 21064 (started by ����05664416459 in E:\������ƴ���\���\histudent-master)
+2022-07-21 23:41:32 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - The following 1 profile is active: "dev"
+2022-07-21 23:41:33 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-21 23:41:33 [main]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-21 23:41:33 [main]**************** INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 23:41:33 [main]**************** INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 23:41:33 [main]**************** INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 23:41:34 [main]**************** INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-07-21 23:41:34 [main]**************** INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 23:41:36 [main]**************** INFO  com.example.histudent.HistudentApplicationTests - Started HistudentApplicationTests in 5.248 seconds (JVM running for 6.183)
+2022-07-21 23:41:37 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-07-21 23:41:37 [SpringApplicationShutdownHook]**************** INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
