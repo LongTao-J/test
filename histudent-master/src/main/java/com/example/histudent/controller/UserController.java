@@ -19,6 +19,8 @@ import com.example.histudent.utils.TokenUtil;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,9 +32,12 @@ import java.util.Random;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-
+//lt666666666666666666666666
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @PostMapping("/login")
     @CrossOrigin
@@ -64,7 +69,9 @@ public class UserController {
     @PostMapping("/register")//注册
     @CrossOrigin
     public R<String> register(HttpServletRequest requests, @RequestBody UserSms userSms){
-        String sms1= (String) requests.getSession().getAttribute(Consts.SESSION_SMS);
+//        String sms1= (String) requests.getSession().getAttribute(Consts.SESSION_SMS);
+        ValueOperations<String,String> redis = redisTemplate.opsForValue();
+        String sms1=redis.get(userSms.getPhone());
         System.out.println("========session："+sms1+"  my"+userSms.getSms());
         if (!userSms.getSms().equals(sms1)){
             return R.error("验证码错误");
@@ -103,8 +110,9 @@ public class UserController {
             System.out.println("ErrMsg:" + e.getErrMsg());
             System.out.println("RequestId:" + e.getRequestId());
         }
-        requests.getSession().setAttribute(Consts.SESSION_SMS,smss.getSms());
-
+//        requests.getSession().setAttribute(Consts.SESSION_SMS,smss.getSms());
+        ValueOperations<String,String> redis=redisTemplate.opsForValue();
+        redis.set(phone,smss.getSms());
         return R.success(smss);
     }
 
@@ -114,6 +122,17 @@ public class UserController {
         //清理Session中保存的当前登录员工的id
         request.getSession().removeAttribute(Consts.SESSION_USER);
         return R.success("退出成功");
+    }
+
+    @GetMapping("/getUserInfo")//获取用户信息
+    @CrossOrigin
+    public R<User> UserInfo(HttpServletRequest request){
+        Long userid= (Long) request.getSession().getAttribute(Consts.SESSION_USER);
+        if(userid==null){
+            return R.error("请先登录");
+        }
+        User user = userService.getById(userid);
+        return R.success(user);
     }
 
 }
